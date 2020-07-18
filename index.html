@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+    <style>
+    
+        body>h1{
+            color:navy;
+            font-weight: 20%;
+            padding-left:2%;
+            font-family: 'Inconsolata', monospace;
+            text-shadow: 2px 2px #ede9e8,
+                        -2px -2px #ede9e8,
+                        2px -3px #ede9e8;
+        }
+        .outer{
+            display:flex;
+            margin-left:6%;
+        }
+        .inner1{
+            background-color: turquoise;
+            width: 500px;
+            height:525px;
+            margin-top:2.5%;
+            margin-left:5%;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            border-radius: 3%;
+            box-shadow: 5px 5px 20px #000, 
+            -20px -20px 40px #ffffff;
+        }
+        .inner1 h1{
+            text-align: center;
+            font-size:40px;
+            padding-top:30%;
+            color:#ede9e8;
+        }
+        .inner2{
+           display: -ms-inline-flexbox;
+           margin-top:2%;
+        }
+        .inner3{
+            background-color: turquoise;
+            margin-bottom: 5%;
+            margin-left:15%;
+            width: 525px;
+            height:250px;
+            border:1px solid transparent;
+            border-radius: 4%;
+            box-shadow: 5px 5px 20px #000, 
+            -20px -20px 40px #ffffff;
+            box-sizing: border-box;
+            text-align:center;
+        }
+        .inner3 h1{
+            padding-top:8%;
+           font-size:35px;
+            color:#ede9e8;
+        }
+
+        .inner1 button{
+            padding: 10px 22px;
+            background:#ede9e8;
+            border-radius:10%;
+            margin-top:40px;
+            margin-left:35%;
+            border:1px solid transparent;
+            box-shadow: 5px 5px 20px #000, 
+            -5px -5px 20px #ffffff;
+        }
+        .inner3 button{
+            padding: 8px 15px;
+            background:#ede9e8;
+            border-radius:10%;
+            margin-top:2%;
+            border:1px solid transparent;
+            box-shadow: 5px 5px 20px #000, 
+            -5px -5px 20px #fff;
+        }
+        .inner1 button a,.inner3 button a{
+            text-decoration: none;
+            font-size:25px;
+            color:navy;
+            font-family: 'Inconsolata', monospace;
+            text-shadow: 2px 2px #ede9e8,
+                        -2px -2px #ede9e8,
+                        2px -3px #ede9e8;
+        }
+        @media screen and (max-width: 1225px) {
+        .outer{
+            display: block;
+        }
+        .inner1{
+            width:525px;
+            margin-left:100px;
+            margin-bottom: 30px;
+        }
+        body>h1{
+            text-align:center;
+            margin-left:100px;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CopFriendly App - ESeva</h1>
+    <div class="outer">
+        <div class="inner1">
+            <h1>Traffic Police App</h1>
+            <button><a href="#">Login</a></button>
+        </div>
+        <div class="inner2">
+            <div class="inner3">
+                <h1>Traffic Controlling Team</h1>
+                <button><a href="#">Login</a></button>
+            </div>
+            <div class="inner3">
+                <h1>Medical Rapid Force Team</h1>
+                <button><a href="#">Login</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
