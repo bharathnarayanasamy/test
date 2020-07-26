@@ -4,125 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
     <style>
-    
-        body>h1{
-            color:navy;
+        body{
+            font-family: 'Inconsolata', monospace;
+        }
+        .outer h1{
+             margin-top:0%;
             font-weight: 20%;
             padding-left:2%;
-            font-family: 'Inconsolata', monospace;
-            text-shadow: 2px 2px #ede9e8,
-                        -2px -2px #ede9e8,
-                        2px -3px #ede9e8;
-        }
-        .outer{
-            display:flex;
-            margin-left:6%;
-        }
-        .inner1{
-            background-color: turquoise;
-            width: 500px;
-            height:525px;
-            margin-top:2.5%;
-            margin-left:5%;
-            border: 1px solid transparent;
-            box-sizing: border-box;
-            border-radius: 3%;
-            box-shadow: 5px 5px 20px #000, 
-            -20px -20px 40px #ffffff;
-        }
-        .inner1 h1{
-            text-align: center;
-            font-size:40px;
-            padding-top:30%;
-            color:#ede9e8;
-        }
-        .inner2{
-           display: -ms-inline-flexbox;
-           margin-top:2%;
-        }
-        .inner3{
-            background-color: turquoise;
-            margin-bottom: 5%;
-            margin-left:15%;
-            width: 525px;
-            height:250px;
             border:1px solid transparent;
-            border-radius: 4%;
-            box-shadow: 5px 5px 20px #000, 
-            -20px -20px 40px #ffffff;
-            box-sizing: border-box;
-            text-align:center;
+            background-color: turquoise;
+            height:100px;
+            padding-top:3%;
+            box-shadow: 2px 2px 20px #000;
         }
-        .inner3 h1{
-            padding-top:8%;
-           font-size:35px;
-            color:#ede9e8;
+        .outer h1 a{
+            text-decoration: none;
+            color:navy;
         }
 
-        .inner1 button{
-            padding: 10px 22px;
-            background:#ede9e8;
-            border-radius:10%;
-            margin-top:40px;
-            margin-left:35%;
-            border:1px solid transparent;
-            box-shadow: 5px 5px 20px #000, 
-            -5px -5px 20px #ffffff;
-        }
-        .inner3 button{
-            padding: 8px 15px;
-            background:#ede9e8;
-            border-radius:10%;
-            margin-top:2%;
-            border:1px solid transparent;
-            box-shadow: 5px 5px 20px #000, 
-            -5px -5px 20px #fff;
-        }
-        .inner1 button a,.inner3 button a{
-            text-decoration: none;
+        label{
             font-size:25px;
+        }
+        .violation input[type="text"]{
+            border:0;
+            background: none;
+            text-align: center;
+            margin:0px 0px 15px 10px;
+            border: 2px solid #999999;
+            padding: 6px;
+            width: 150px;
+            outline: none;
+            color: BLACK;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: 0.5s;
+
+        }
+        ::placeholder{
+            color:#c7c7c7;
+        }
+        .violation input[type="text"]:focus{
+            width:210px;
+            border: 3px solid teal;
+            transition:2s;
+        }
+        #containner1,#containner2{
+            position:relative;
+            margin:10% 0% 5% 30%;
+            border:2px solid black;
+            width:600px;
+            height:620px;
+            box-shadow: 3px 3px 15px blue;
+            border-radius:15px;
+            transition:40s;
+        }
+        #containner1 .violation,#containner2 .violation{
+            margin:10% 0% 0% 12%;
+        }
+        #containner1,#containner2{
+            display:none;
+        }
+        #containner2{
+            margin:10% 0% 5% 30%;
+            height:450px;
+        }
+        .button{
+            margin-top:7%;
+            margin-left:32%;
+        }
+        .button >input[type="button"]{
+            letter-spacing: 1px;
+            margin-left:30px;
+            padding:15px;
+            width:20%;
+            border:3px solid transparent;
+            background-color: navy;
+            color:turquoise;
+            border-radius: 20px;
+            font-size:20px;
+            font-weight: bold;
+            cursor:pointer;
+            box-shadow: 2px 2px 20px #000;
+            transition: 2s;
+        }
+        .button >input[type="button"]:hover{
+            border-color:transparent;
             color:navy;
-            font-family: 'Inconsolata', monospace;
-            text-shadow: 2px 2px #ede9e8,
-                        -2px -2px #ede9e8,
-                        2px -3px #ede9e8;
+            width:24%;
+            background-color: turquoise;
+            transition:1s;
         }
-        @media screen and (max-width: 1225px) {
-        .outer{
-            display: block;
+        #containner1 .violation >input[type="button"],#containner2 .violation >input[type="button"]{
+            margin:0% 29%;
+            border:3px solid blue;
+            width:140px;
+            padding:10px;
+            font-size:25px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor:pointer;
+            transition: 1s;
+            box-shadow:4px 4px 10px black;
         }
-        .inner1{
-            width:525px;
-            margin-left:100px;
-            margin-bottom: 30px;
+
+        #containner2 .violation >input[type="button"]{
+                margin-top:5%;
         }
-        body>h1{
-            text-align:center;
-            margin-left:100px;
-        }
-        }
-        
+        input[type="button"]:hover{
+            color:blue;
+        } 
     </style>
 </head>
 <body>
-    <h1>CopFriendly App - ESeva</h1>
     <div class="outer">
-        <div class="inner1">
-            <h1>Traffic Police App</h1>
-            <button><a href="#">Login</a></button>
+        <h1><a href="index.html">CopFriendly App-ESeva</a></h1>
+        <div class="button">
+            <input type="button" onclick="check(1)" value="VIOLATION"/>
+            <input type="button" onclick="check(2)" value="ACCIDENT"/>
         </div>
-        <div class="inner2">
-            <div class="inner3">
-                <h1>Traffic Controlling Team</h1>
-                <button><a href="#">Login</a></button>
-            </div>
-            <div class="inner3">
-                <h1>Medical Rapid Force Team</h1>
-                <button><a href="#">Login</a></button>
-            </div>
+        <div id="containner1">
+            <form class="violation">
+                <label>Violation Name :</label>
+                    <input type="text" name="name" placeholder="Name"/></br>
+                <label>Violation Type :</label>
+                    <input type="text" name="type" placeholder="Violation Type"/></br>
+                <label>Driving License No :</label>
+                    <input type="text" name="license" placeholder="License Number"/></br>
+                <label>Vehicle Number :</label>
+                    <input type="text" name="number" placeholder="Vehicle Number"/></br>
+                <label>Location :</label>
+                    <input type="text" name="location" placeholder="Location"/></br>
+                <label>Repeated Offender :</label>
+                    <input type="radio"  name="joke" value="yes" /><b>Yes</b>
+                    <input type="radio"  name="joke" value="no" /> <b>No</b></br></br>
+                <label>Date :</label>
+                    <input type="text" name="date" placeholder="Date"/></br>
+                <label>Time :</label>
+                    <input type="text" name="time" placeholder="Time"/></br></br></br>
+                <input type="button" value="SUBMIT"/>
+            </form>
+        </div>
+        <div id="containner2">
+            <form class="violation">
+                <label>Location :</label>
+                    <input type="text" name="name" placeholder="location"/></br>
+                <label>Number of People :</label>
+                    <input type="text" name="type" placeholder="count"/></br>
+                <label>Type of Accident:</label>
+                    <input type="text" name="license" placeholder="accident"/></br>
+                <label>Date :</label>
+                    <input type="text" name="date" placeholder="Date"/></br>
+                <label>Time :</label>
+                    <input type="text" name="time" placeholder="Time"/></br>
+                <input type="button" value="SUBMIT"/>
+            </form>
         </div>
     </div>
+    <script language="javascript">
+        function check(temp)
+        {
+            if(temp==1){
+                document.getElementById("containner1").style.display="block";
+                document.getElementById("containner2").style.display="none";
+            }
+            else{
+                document.getElementById("containner2").style.display="block";
+                document.getElementById("containner1").style.display="none";
+            }
+        }
+    </script>
 </body>
 </html>
